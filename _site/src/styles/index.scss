@@ -1,0 +1,39 @@
+@import './base/reset';
+
+// ------------------------------------
+// Utils
+// ------------------------------------
+
+@import './utils/variables';
+@import './utils/functions';
+@import './utils/mixins';
+@import './utils/responsive';
+
+// ------------------------------------
+// Shared
+// ------------------------------------
+
+@import './shared/paragraphs';
+@import './shared/pages';
+@import './shared/titles';
+
+// ------------------------------------
+// Base
+// ------------------------------------
+
+@import './base/fonts';
+@import './base/base';
+
+// ------------------------------------
+// Components
+// ------------------------------------
+
+@import './components/preloader';
+@import './components/navigation';
+@import './components/footer';
+
+// ------------------------------------
+// Pages
+// ------------------------------------
+
+@import './pages/Home/hero'

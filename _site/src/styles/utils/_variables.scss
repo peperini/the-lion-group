@@ -1,0 +1,32 @@
+// PRIMITIVES
+
+$color-athens-gray: #F0F0F1;
+$color-golden-tainoi: #FCCC5E;
+$color-gray-1000: #000000;
+$color-gray-400: #AFAFAF;
+$color-gray-0: #FFFFFF;
+
+// TOKENS
+
+$color-surface-primary: $color-athens-gray;
+$color-text-primary: $color-gray-1000;
+$color-text-secondary: $color-gray-400;
+$color-text-invert: $color-gray-0;
+$color-border: $color-gray-1000;
+
+// FONTS
+
+$font-lora: 'Lora';
+$font-open-sans: 'Open Sans';
+
+// EASING
+
+$ease-out-expo: cubic-bezier(0.19, 1, 0.4, 1);
+
+// Z-INDEXES
+
+$z-indexes: (
+  'preloader',
+  'navigation',
+  'content'
+);

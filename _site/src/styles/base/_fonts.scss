@@ -1,0 +1,35 @@
+@font-face {
+  font-family: $font-lora;
+  src: url('../fonts/lora-semibold.woff2') format('woff2'),
+      url('../fonts/lora-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-open-sans;
+  src: url('../fonts/open-sans-semibold.woff2') format('woff2'),
+      url('../fonts/open-sans-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-open-sans;
+  src: url('../fonts/open-sans-bold.woff2') format('woff2'),
+      url('../fonts/open-sans-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-open-sans;
+  src: url('../fonts/open-sans-regular.woff2') format('woff2'),
+      url('../fonts/open-sans-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

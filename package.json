@@ -1,0 +1,26 @@
+{
+  "name": "the-lion-group",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "author": "Jose Felix <jarmando.felix@icloud.com> (https://www.josefelix.work)",
+  "scripts": {
+    "clean": "rm -rf _site",
+    "dev": "npm run clean && eleventy --config=.eleventy.cjs --serve --incremental",
+    "build": "npm run clean && eleventy --config=.eleventy.cjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "html-minifier": "^4.0.0",
+    "pug": "^3.0.3",
+    "sass": "^1.78.0",
+    "vite": "^5.4.1",
+    "vite-plugin-pwa": "^0.20.5"
+  },
+  "dependencies": {
+    "fontfaceobserver": "^2.3.0",
+    "gsap": "^3.12.5",
+    "include-media": "^2.0.0"
+  }
+}

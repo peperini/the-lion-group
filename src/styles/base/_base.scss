@@ -1,0 +1,18 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  font-size: calc(100vw / 1440 * 10);
+  overscroll-behavior: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: $font-open-sans;
+  font-size: 1.6rem;
+}
