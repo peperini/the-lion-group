@@ -1,0 +1,77 @@
+.carousel {
+  display: flex;
+  padding: 11.2rem 12rem;
+  gap: 7.7rem;
+  height: 260rem;
+}
+
+.carousel__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15rem 0;
+  width: 55.8rem;
+}
+
+.carousel__text-container__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.2rem;
+}
+
+.carousel__text-container__content__upper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+  align-self: stretch;
+}
+
+.carousel__text-container__content__title {
+  @extend %heading-3;
+
+  color: $color-text-secondary;
+}
+
+
+.carousel__text-container__content__text {
+  @extend %paragraph-r-r;
+}
+
+.carousel__text-container__content__button {
+  @extend %button-primary-l;
+}
+
+.carousel__image-container {
+  position: relative;
+}
+
+.carousel__image-container__swiper {
+  position: sticky;
+  top: 33%;
+}
+
+.carousel__image-container__swiper__pagination {
+
+}
+
+
+.carousel__image-container__swiper__pagination__bullet {
+
+}
+
+.carousel__image-container__swiper__images {
+
+}
+
+.carousel__image-container__swiper__images__media {
+  width: 54.2rem;
+  height: 40.6rem;
+}
+
+.carousel__image-container__swiper__images__media__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

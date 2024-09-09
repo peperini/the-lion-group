@@ -31,9 +31,18 @@
 @import './components/preloader';
 @import './components/navigation';
 @import './components/footer';
+@import './components/buttons';
 
 // ------------------------------------
 // Pages
 // ------------------------------------
 
-@import './pages/Home/hero'
+@import './pages/Home/hero';
+@import './pages/Home/metrics';
+@import './pages/Home/brand';
+@import './pages/Home/carousel';
+@import './pages/Home/services';
+@import './pages/Home/highlight-business';
+@import './pages/Home/highlight-brand';
+@import './pages/Home/blog';
+@import './pages/Home/team';

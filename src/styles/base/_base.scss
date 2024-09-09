@@ -3,16 +3,28 @@
 *:before {
   box-sizing: border-box;
   user-select: none;
+  overscroll-behavior: none;
 }
 
 html {
+  background: $color-surface-primary;
+  color: $color-text-primary;
+
   font-size: calc(100vw / 1440 * 10);
-  overscroll-behavior: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  font-family: $font-open-sans;
-  font-size: 1.6rem;
+  @extend %paragraph-r-r;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  pointer-events: none;
 }

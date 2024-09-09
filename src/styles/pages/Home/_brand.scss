@@ -1,0 +1,19 @@
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 11.2rem 12rem;
+  gap: 4rem;
+  background: $color-surface-secondary;
+}
+
+.brand__message {
+  @extend %heading-4;
+
+  width: 61.4rem;
+  flex-shrink: 0;
+}
+
+.brand__product {
+  @extend %paragraph-l-r;
+}

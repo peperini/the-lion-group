@@ -1,0 +1,48 @@
+%button-primarry-m {
+  @extend %center;
+  @extend %paragraph-s-b;
+
+  padding: 1.6rem 5.6rem;
+  color: $color-text-invert;
+  border-radius: 0.4rem;
+  background: $color-surface-accent;
+  box-shadow: 0px 4px 10px 0px rgba(23, 7, 102, 0.35);
+  cursor: pointer;
+}
+
+%button-secondary-m {
+  @extend %center;
+  @extend %paragraph-s-b;
+
+  padding: 1.6rem 5.6rem;
+  color: $color-text-secondary;
+  border-radius: 0.4rem;
+  background: $color-surface-primary;
+  box-shadow: 0px 4px 10px 0px rgba(23, 7, 102, 0.35);
+  cursor: pointer;
+}
+
+%button-primary-l {
+  @extend %center;
+  @extend %paragraph-r-b;
+
+  padding: 2.4rem 5.6rem;
+  color: $color-text-invert;
+  border-radius: 0.4rem;
+  background: $color-surface-accent;
+  box-shadow: 0px 4px 10px 0px rgba(23, 7, 102, 0.35);
+  cursor: pointer;
+}
+
+%button-secondary-l {
+  @extend %center;
+  @extend %paragraph-r-b;
+
+  padding: 2.4rem 5.6rem;
+  color: $color-text-secondary;
+  border-radius: 0.4rem;
+  background: $color-surface-primary;
+  box-shadow: 0px 4px 10px 0px rgba(23, 7, 102, 0.35);
+  cursor: pointer;
+}
+

@@ -1,0 +1,98 @@
+.services {
+  @extend %center;
+
+  background: $color-surface-secondary;
+  flex-direction: column;
+  gap: 4.8rem;
+  padding: 8rem 12rem;
+}
+
+.services__content {
+  @extend %center;
+
+  flex-direction: column;
+  gap: 6.4rem;
+}
+
+
+.services__content__title {
+  @extend %heading-2;
+
+  width: 86.4rem;
+  text-align: center;
+  color: $color-text-secondary;
+}
+
+.services__content__card__container {
+  @extend %center;
+
+  gap: 5rem;
+}
+
+.services__content__card {
+  @extend %center;
+
+  flex-direction: column;
+  background: $color-surface-primary;
+  width: 33.5rem;
+  padding: 5.3rem 3.2rem;
+  gap: 3.2rem;
+
+  border-radius: 0.4rem;
+  border: 1px solid #ECECEC;
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.services__content__card__icon {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.services__content__card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+
+.services__content__card__content__title {
+  @extend %heading-6;
+
+  color: $color-text-secondary;
+}
+
+
+.services__content__card__content__list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+
+.services__content__card__content__list__item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  align-self: stretch;
+}
+
+
+.services__content__card__content__list__item__icon {
+  @extend %center;
+
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+
+.services__content__card__content__list__item__text {
+  @extend %paragraph-l-r;
+}
+
+.services__button {
+  @extend %button-primary-l;
+}

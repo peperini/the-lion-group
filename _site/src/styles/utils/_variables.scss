@@ -1,18 +1,24 @@
 // PRIMITIVES
 
-$color-athens-gray: #F0F0F1;
-$color-golden-tainoi: #FCCC5E;
+$color-arapawa: #170864;
+$color-arapawa-100: #F3F0FD;
 $color-gray-1000: #000000;
-$color-gray-400: #AFAFAF;
+$color-gray-700: #363328;
+$color-gray-100: #F2F2F2;
 $color-gray-0: #FFFFFF;
 
 // TOKENS
 
-$color-surface-primary: $color-athens-gray;
-$color-text-primary: $color-gray-1000;
-$color-text-secondary: $color-gray-400;
+$color-surface-primary: $color-gray-0;
+$color-surface-secondary: $color-arapawa-100;
+$color-surface-tertiary: $color-gray-100;
+$color-surface-accent: $color-arapawa;
+$color-surface-invert: $color-gray-1000;
+
+$color-text-primary: $color-gray-700;
+$color-text-secondary: $color-gray-1000;
+$color-text-accent: $color-arapawa;
 $color-text-invert: $color-gray-0;
-$color-border: $color-gray-1000;
 
 // FONTS
 

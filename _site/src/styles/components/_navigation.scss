@@ -1,0 +1,46 @@
+.navigation {
+  @extend %center;
+
+  z-index: z('navigation');
+  background-color: $color-surface-tertiary;
+  width: 100%;
+  padding: 2.4rem 4.2rem;
+}
+
+.navigation__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120rem;
+}
+
+.navigation__logo__link {
+
+}
+
+.navigation__logo {
+  width: 17.8rem;
+  height: 4rem;
+}
+
+.navigation__list {
+  display: flex;
+  color: $color-text-secondary;
+  align-items: center;
+  gap: 3.2rem;
+  align-self: stretch;
+  line-height: 100%;
+}
+
+.navigation__list__item {
+
+}
+
+.navigation__list__item__link {
+
+}
+
+.navigation__cta {
+  @extend %button-primarry-m;
+}
+

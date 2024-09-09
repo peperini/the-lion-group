@@ -1,22 +1,24 @@
 nav.navigation(role="navigation")
-  img.navigation__logo
+  .navigation__wrapper
+    a.navigation__logo__link(href="/")
+      img.navigation__logo(src="/the-lion-group-logo.png", alt="The lion group logo")
 
-  ul.navigation__list
-    li.navigation__list__item
-      a.navigation__list__item__link
-        span Services
+    ul.navigation__list
+      li.navigation__list__item
+        a.navigation__list__item__link(href='#')
+          span Services
 
-    li.navigation__list__item
-      a.navigation__list__item__link
-        span About Us
+      li.navigation__list__item
+        a.navigation__list__item__link(href='#')
+          span About Us
 
-    li.navigation__list__item
-      a.navigation__list__item__link
-        span Case Studies
+      li.navigation__list__item
+        a.navigation__list__item__link(href='#')
+          span Case Studies
 
-    li.navigation__list__item
-      a.navigation__list__item__link
-        span Resources
+      li.navigation__list__item
+        a.navigation__list__item__link(href='#')
+          span Resources
 
-  .navigation__cta
-    span Partner With Us
+    .navigation__cta.button--primary
+      span Partner With Us

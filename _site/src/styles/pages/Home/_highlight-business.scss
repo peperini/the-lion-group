@@ -1,0 +1,63 @@
+.highlight-business {
+  @extend %center;
+
+  padding: 8rem 12rem 4rem 12rem;
+  gap: 9.2rem;
+}
+
+.highlight-business__media {
+  width: 57.4rem;
+  height: 62.6rem;
+}
+
+.highlight-business__media__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.highlight-business__right {
+  display: flex;
+  width: 53.4rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.2rem;
+}
+
+.highlight-business__right__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+  align-self: stretch;
+}
+
+.highlight-business__right__content__upper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  align-self: stretch;
+}
+
+.highlight-business__right__content__upper__caption {
+  @extend %paragraph-s-b;
+
+  color: $color-text-accent;
+  align-self: stretch;
+}
+
+.highlight-business__right__content__upper__title {
+  @extend %heading-3;
+
+  color: $color-text-secondary;
+  align-self: stretch;
+}
+
+.highlight-business__right__content__text {
+  align-items: stretch;
+}
+
+.highlight-business__right__button {
+  @extend %button-primary-l;
+}
