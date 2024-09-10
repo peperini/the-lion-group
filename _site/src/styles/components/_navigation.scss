@@ -1,11 +1,12 @@
 .navigation {
   @extend %center;
 
-  z-index: z('navigation');
+
   flex-direction: column;
 }
 
 .navigation__wrapper {
+  z-index: z('navigation');
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,8 +74,8 @@
   visibility: hidden;
   opacity: 0;
 
+  z-index: z('dropdown');
   position: absolute;
-  top: 10rem;
   background-color: $color-surface-primary;
   padding: 8.2rem 18.6rem;
   width: 100%;

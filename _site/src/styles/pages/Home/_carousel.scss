@@ -108,7 +108,7 @@
   background-color: #D9D9D9;
 
   @include media('<phone') {
-    background-color: hsla(0, 0, 100, 0.6);
+    background-color: hsla(0, 0%, 100%, 0.6);
   }
 }
 
@@ -116,7 +116,7 @@
   background-color: #A1A1A1;
 
   @include media('<phone') {
-    background-color: hsla(0, 0, 100, 1);
+    background-color: hsla(0, 0%, 100%, 1);
   }
 }
 
