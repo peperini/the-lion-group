@@ -47,7 +47,7 @@
 
 %paragraph-l-r {
   /* Paragaph (L/R) */
-  font-family: "Open Sans";
+  font-family: $font-open-sans;
   font-size: 1.8rem;
   font-weight: normal;
   line-height: 150%; /* 2.7rem */
@@ -55,7 +55,7 @@
 
 %paragraph-l-b {
   /* Paragaph (L/B) */
-  font-family: "Open Sans";
+  font-family: $font-open-sans;
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 150%; /* 2.7rem */
@@ -63,7 +63,7 @@
 
 %paragraph-xl-r {
   /* Paragraph (XL/R) */
-  font-family: "Open Sans";
+  font-family: $font-open-sans;
   font-size: 2rem;
   font-weight: normal;
   line-height: 150%; /* 3rem */
@@ -71,8 +71,16 @@
 
 %paragraph-xl-b {
   /* Paragraph (XL/B) */
-  font-family: "Open Sans";
+  font-family: $font-open-sans;
   font-size: 2rem;
   font-weight: bold ;
+  line-height: 150%; /* 3rem */
+}
+
+%paragraph-xxl-m {
+  /* Paragraph (XXL/M) */
+  font-family: $font-open-sans;
+  font-size: 2.4rem;
+  font-weight: 600;
   line-height: 150%; /* 3rem */
 }

@@ -3,7 +3,6 @@
 *:before {
   box-sizing: border-box;
   user-select: none;
-  overscroll-behavior: none;
 }
 
 html {
@@ -13,6 +12,10 @@ html {
   font-size: calc(100vw / 1440 * 10);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+
+  @include media('<phone') {
+    font-size: calc(100vw / 375 * 10);
+  }
 }
 
 body {

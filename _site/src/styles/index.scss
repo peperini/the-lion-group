@@ -8,6 +8,7 @@
 @import './utils/functions';
 @import './utils/mixins';
 @import './utils/responsive';
+@import './utils/lenis';
 
 // ------------------------------------
 // Shared
@@ -37,6 +38,7 @@
 // Pages
 // ------------------------------------
 
+@import './pages/Home/home';
 @import './pages/Home/hero';
 @import './pages/Home/metrics';
 @import './pages/Home/brand';

@@ -2,16 +2,20 @@
   @extend %center;
 
   z-index: z('navigation');
-  background-color: $color-surface-tertiary;
-  width: 100%;
-  padding: 2.4rem 4.2rem;
+  flex-direction: column;
 }
 
 .navigation__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 120rem;
+  background-color: $color-surface-tertiary;
+  padding: 2.4rem 12rem;
+  width: 100%;
+
+  @include media('<phone') {
+    padding: 2.11rem 2.11rem;
+  }
 }
 
 .navigation__logo__link {
@@ -21,6 +25,11 @@
 .navigation__logo {
   width: 17.8rem;
   height: 4rem;
+
+  @include media('<phone') {
+    width: 14.6rem;
+    height: 3.2809rem;
+  }
 }
 
 .navigation__list {
@@ -30,6 +39,10 @@
   gap: 3.2rem;
   align-self: stretch;
   line-height: 100%;
+
+  @include media('<phone') {
+    display: none;
+  }
 }
 
 .navigation__list__item {
@@ -42,5 +55,104 @@
 
 .navigation__cta {
   @extend %button-primarry-m;
+
+  @include media('<phone') {
+    display: none;
+  }
 }
 
+.navigation__menu__icon {
+  display: none;
+
+  @include media('<phone') {
+    display: block;
+  }
+}
+
+.navigation__dropdwon {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  top: 10rem;
+  background-color: $color-surface-primary;
+  padding: 8.2rem 18.6rem;
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.navigation__dropdwon__wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 16.9rem;
+  align-self: stretch;
+}
+
+.navigation__dropdown__services {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.navigation__dropdown__services__item {
+  width: 100%;
+}
+
+.navigation__dropdown__services__item__link {
+  @extend %paragraph-xxl-m;
+
+  width: 100%;
+}
+
+.navigation__dropdown__banner {
+  @extend %center;
+
+  padding: 2.4rem;
+  width: 64.1rem;
+  gap: 2.2rem;
+  background-color: $color-surface-tertiary;
+  border-radius: 2rem;
+}
+
+.navigation__dropdown__banner__content {
+  display: flex;
+  width: 32.3rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.navigation__dropdown__banner__content__upper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  align-self: stretch;
+}
+
+.navigation__dropdown__banner__content__upper__title {
+  @extend %heading-6;
+
+  align-self: stretch;
+  color: $color-text-secondary;
+}
+
+.navigation__dropdown__banner__content__upper__text {
+  @extend %paragraph-l-r;
+
+  align-self: stretch;
+}
+
+.navigation__dropdown__banner__content__button {
+  @extend %button-primarry-m;
+}
+
+.navigation__dropdown__banner__media {
+  width: 19.1rem;
+  height: 25.3rem;
+}
+
+.navigation__dropdown__banner__media__image {
+  object-fit: cover;
+}

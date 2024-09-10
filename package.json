@@ -21,6 +21,7 @@
   "dependencies": {
     "fontfaceobserver": "^2.3.0",
     "gsap": "^3.12.5",
-    "include-media": "^2.0.0"
+    "include-media": "^2.0.0",
+    "lenis": "^1.1.13"
   }
 }
