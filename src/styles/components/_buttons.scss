@@ -8,6 +8,7 @@
   background: $color-surface-accent;
   box-shadow: 0px 4px 10px 0px rgba(23, 7, 102, 0.35);
   cursor: pointer;
+  transition: background-color 0.3s $ease-out-expo, color 0.3s $ease-out-expo, box-shadow 0.3s $ease-out-expo;
 }
 
 %button-secondary-m {
@@ -20,6 +21,7 @@
   background: $color-surface-primary;
   box-shadow: 0px 4px 10px 0px rgba(23, 7, 102, 0.35);
   cursor: pointer;
+  transition: background-color 0.3s $ease-out-expo, color 0.3s $ease-out-expo, box-shadow 0.3s $ease-out-expo;
 }
 
 %button-primary-l {
@@ -32,6 +34,7 @@
   background: $color-surface-accent;
   box-shadow: 0px 4px 10px 0px rgba(23, 7, 102, 0.35);
   cursor: pointer;
+  transition: background-color 0.3s $ease-out-expo, color 0.3s $ease-out-expo, box-shadow 0.3s $ease-out-expo;
 }
 
 %button-secondary-l {
@@ -44,5 +47,18 @@
   background: $color-surface-primary;
   box-shadow: 0px 4px 10px 0px rgba(23, 7, 102, 0.35);
   cursor: pointer;
+  transition: background-color 0.5s $ease-out-expo, color 0.5s $ease-out-expo, box-shadow 0.5s $ease-out-expo;
+}
+
+.button--primary:hover {
+  background-color: $color-surface-primary;
+  color: $color-arapawa;
+  box-shadow: 0px 1px 3px 0px rgba(23, 7, 102, 0.35);
+}
+
+.button--secondary:hover {
+  background-color: $color-surface-secondary;
+  color: $color-text-primary;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.35);
 }
 

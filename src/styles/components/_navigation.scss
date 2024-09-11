@@ -54,6 +54,13 @@
 
 }
 
+.navigation--active {
+  opacity: 0.3;
+  cursor: pointer;
+
+  transition: opacity 600ms $ease-out-expo;
+}
+
 .navigation__cta {
   @extend %button-primarry-m;
 
@@ -62,12 +69,16 @@
   }
 }
 
-.navigation__menu__icon {
+.navigation__menu__icon__link {
   display: none;
 
   @include media('<phone') {
     display: block;
   }
+}
+
+.navigation__menu__icon {
+  cursor: pointer;
 }
 
 .navigation__dropdwon {
@@ -84,9 +95,8 @@
 
 .navigation__dropdwon__wrapper {
   display: flex;
-  align-items: flex-start;
-  gap: 16.9rem;
-  align-self: stretch;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation__dropdown__services {
@@ -94,6 +104,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1.6rem;
+  width: 32.8rem;
 }
 
 .navigation__dropdown__services__item {
@@ -156,4 +167,59 @@
 
 .navigation__dropdown__banner__media__image {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
+
+.navigation__menu-phone {
+  @extend %center;
+
+  visibility: hidden;
+  opacity: 0;
+
+  justify-content: flex-start;
+  padding-top: 6.7rem;
+  z-index: z('menuMobile');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $color-surface-accent;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.navigation__menu-phone__close {
+  cursor: pointer;
+  position: absolute;
+  top: 2.4rem;
+  right: 2.2rem;
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+.navigation__menu-phone__logo {
+  width: 17.8rem;
+  height: 4rem;
+}
+
+.navigation__menu-phone__list {
+  @extend %center;
+
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.navigation__menu-phone__list__item {
+  align-items: stretch;
+}
+
+.navigation__menu-phone__list__item__link {
+  color: $color-text-invert;
+}
+
+.navigation__menu-phone__cta {
+  @extend %button-secondary-l;
+}
+

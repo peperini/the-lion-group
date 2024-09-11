@@ -1,6 +1,7 @@
 .highlight-business {
   @extend %center;
 
+  position: relative;
   padding: 8rem 12rem 4rem 12rem;
   gap: 9.2rem;
 
@@ -9,6 +10,15 @@
     flex-direction: column;
     gap: 2.4rem;
   }
+}
+
+.highlight-business__bg-logo {
+  position: absolute;
+  right: -8em;
+  bottom: -42rem;
+  width: 71.1rem;
+  height: 73.3rem;
+  z-index: -1;
 }
 
 .highlight-business__media {
