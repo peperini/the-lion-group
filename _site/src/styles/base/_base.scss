@@ -1,0 +1,33 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  background: $color-surface-primary;
+  color: $color-text-primary;
+
+  font-size: calc(100vw / 1440 * 10);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @include media('<phone') {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+body {
+  @extend %paragraph-r-r;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  pointer-events: none;
+}
