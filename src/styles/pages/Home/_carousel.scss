@@ -9,6 +9,7 @@
     flex-direction: column-reverse;
     gap: 2.4rem;
     height: 100%;
+    position: relative;
   }
 }
 
@@ -24,6 +25,8 @@
     width: 100%;
     gap: 3.2rem;
     height: 200rem;
+    position: absolute;
+    top: 28.8rem;
   }
 }
 
@@ -43,10 +46,6 @@
   align-items: flex-start;
   gap: 1.6rem;
   align-self: stretch;
-
-  @include media('<phone') {
-
-  }
 }
 
 .carousel__text-container__content__title {
@@ -79,6 +78,10 @@
 
 .carousel__image-container {
   position: relative;
+
+  @include media('<phone') {
+    height: 228.8rem;
+  }
 }
 
 .carousel__image-container__swiper {
@@ -87,6 +90,10 @@
   gap: 2rem;
   position: sticky;
   top: 33%;
+
+  @include media('<phone') {
+    top: 0;
+  }
 }
 
 .carousel__image-container__swiper__pagination {

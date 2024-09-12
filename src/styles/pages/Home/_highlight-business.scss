@@ -19,6 +19,13 @@
   width: 71.1rem;
   height: 73.3rem;
   z-index: -1;
+
+  @include media('<phone') {
+    width: 18.1621rem;
+    height: 19.3782rem;
+    right: -7.5425rem;
+    bottom: -6.0641rem;
+  }
 }
 
 .highlight-business__media {

@@ -7,6 +7,11 @@ import each from 'lodash/each'
 
 // Variables
 const lenis = new Lenis()
+let isAnimating = false
+let activeDropdown = null;
+let activeIcon = null;  // Store the active icon
+
+// Selectors
 const service = document.querySelector('.service-link')
 const aboutUs = document.querySelector('.about-link')
 const caseStudies = document.querySelector('.case-link')
@@ -21,6 +26,8 @@ const links = document.querySelectorAll('a')
 const navMenu = document.querySelector('.navigation__menu-phone')
 const navigationHam = document.querySelector('.navigation__menu__icon')
 const navigationHamClose = document.querySelector('.navigation__menu-phone__close')
+const dropdowns = document.querySelectorAll('.highlight-brand__left__content__lower__dropdown');
+
 
 function linkMouseIn() {
   this.classList.add('navigation--active')
@@ -29,6 +36,44 @@ function linkMouseIn() {
 function linkMouseLeave() {
   this.classList.remove('navigation--active')
 }
+
+dropdowns.forEach(dropdown => {
+  const head = dropdown.querySelector('.highlight-brand__left__content__lower__dropdown__head');
+  const content = dropdown.querySelector('.highlight-brand__left__content__lower__dropdown__content');
+  const dropdownIcon = dropdown.querySelector('.highlight-brand__left__content__lower__dropdown__head__icon');
+
+  // Close all dropdowns except the first one by default
+  if(dropdown !== dropdowns[0]) {
+    content.style.display = 'none'
+  } else {
+    activeDropdown = dropdown
+    activeIcon = dropdownIcon
+    dropdownIcon.style.transform = 'rotate(180deg)'
+  }
+
+  head.addEventListener('click', () => {
+    if(activeDropdown && activeDropdown !== dropdown) {
+      // Close previously active dropdown and reset the icon
+      const activeContent = activeDropdown.querySelector('.highlight-brand__left__content__lower__dropdown__content')
+      activeContent.style.display = 'none'
+      activeIcon.style.transform = 'rotate(0deg)'
+    }
+
+    if(dropdown === activeDropdown) {
+      // If clicking the currently active dropdown, toggle it closed
+      content.style.display = 'none'
+      dropdownIcon.style.transform = 'rotate(0deg)';
+      activeDropdown = null;
+      activeIcon = null;
+    } else {
+      // Otherwise, open the clicked dropdown
+      content.style.display = 'block'
+      dropdownIcon.style.transform = 'rotate(180deg)';
+      activeDropdown = dropdown;
+      activeIcon = dropdownIcon;
+    }
+  })
+})
 
 // Loop over each content element
 carouselContents.forEach((content, index) => {
@@ -55,7 +100,6 @@ carouselContents.forEach((content, index) => {
   }, "+=1.5") // Delay to keep image visible during the scroll
 })
 
-let isAnimating = false
 function showDropdown() {
   if (isAnimating) return
   isAnimating = true

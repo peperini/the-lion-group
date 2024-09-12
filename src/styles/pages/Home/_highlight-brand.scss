@@ -86,6 +86,7 @@
   width: 100%;
   align-items: center;
   gap: 1.6rem;
+  cursor: pointer;
 }
 
 .highlight-brand__left__content__lower__dropdown__head__text {
@@ -107,6 +108,11 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+
+  @include media('<phone') {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .highlight-brand__left__content__lower__dropdown__content {
