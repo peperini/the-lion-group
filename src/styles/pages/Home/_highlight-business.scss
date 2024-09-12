@@ -14,17 +14,17 @@
 
 .highlight-business__bg-logo {
   position: absolute;
-  right: -8em;
-  bottom: -42rem;
-  width: 71.1rem;
-  height: 73.3rem;
+  right: 0;
+  bottom: -39rem;
+  width: 58.4rem;
+  height: 69.6rem;
   z-index: -1;
 
   @include media('<phone') {
-    width: 18.1621rem;
+    width: 15.4391rem;
     height: 19.3782rem;
-    right: -7.5425rem;
-    bottom: -6.0641rem;
+    right: 0rem;
+    bottom: -3.7rem;
   }
 }
 

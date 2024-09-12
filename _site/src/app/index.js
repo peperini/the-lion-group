@@ -136,22 +136,80 @@ function hideDropdown() {
 }
 
 function showHam() {
-  gsap.fromTo(navMenu, {
+  const navClose = navMenu.querySelector('.navigation__menu-phone__close__link')
+  const navLogo = navMenu.querySelector('.navigation__menu-phone__logo__link')
+  const navList = navMenu.querySelector('.navigation__menu-phone__list')
+  const navButton = navMenu.querySelector('.navigation__menu-phone__cta')
+
+  const tl = gsap.timeline()
+  tl.fromTo(navMenu, {
     autoAlpha: 1,
-    x: '100%'
+    scaleX: '0',
+    transformOrigin: '100% 0'
   }, {
-    x: '0',
+    scaleX: '100%',
+    duration: 1,
+    ease: 'expo.out'
+  }).to(navClose, {
+    autoAlpha: 1,
+    duration: 0.5,
+    ease: 'expo.out'
+  }).to(navLogo, {
+    autoAlpha: 1,
+    duration: 0.5,
+    ease: 'expo.out'
+  }, '-=0.5').to(navList, {
+    autoAlpha: 1,
+    duration: 0.5,
+    ease: 'expo.out'
+  }, '-=0.5').to(navButton, {
+    autoAlpha: 1,
+    duration: 0.5,
+    ease: 'expo.out'
+  }, '-=0.5')
+  /* gsap.fromTo(navMenu, {
+    autoAlpha: 1,
+    scaleX: '0',
+    transformOrigin: '100% 0'
+  }, {
+    scaleX: '100%',
     duration: 1.1,
     ease: 'expo.out'
-  })
+  }) */
 }
 
 function hideHam() {
-  gsap.to(navMenu, {
-    x: '100%',
+  const navClose = navMenu.querySelector('.navigation__menu-phone__close__link')
+  const navLogo = navMenu.querySelector('.navigation__menu-phone__logo__link')
+  const navList = navMenu.querySelector('.navigation__menu-phone__list')
+  const navButton = navMenu.querySelector('.navigation__menu-phone__cta')
+
+  const tl = gsap.timeline()
+  tl.to(navClose, {
+    autoAlpha: 0,
+    duration: 0.5,
+    ease: 'expo.out'
+  }).to(navLogo, {
+    autoAlpha: 0,
+    duration: 0.5,
+    ease: 'expo.out'
+  }, '-=0.5').to(navList, {
+    autoAlpha: 0,
+    duration: 0.5,
+    ease: 'expo.out'
+  }, '-=0.5').to(navButton, {
+    autoAlpha: 0,
+    duration: 0.5,
+    ease: 'expo.out'
+  }, '-=0.5').to(navMenu, {
+    scaleX: '0',
+  })
+  /* gsap.to(navMenu, {
+    scaleX: '0',
+    autoAlpha: 0,
     duration: 1.1,
     ease: 'expo.out'
-  })
+  }) */
 }
 
 

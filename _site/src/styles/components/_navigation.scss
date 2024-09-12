@@ -1,8 +1,8 @@
 .navigation {
   @extend %center;
 
-
   flex-direction: column;
+  overflow: hidden;
 }
 
 .navigation__wrapper {
@@ -82,6 +82,7 @@
 }
 
 .navigation__dropdwon {
+  overflow: hidden;
   visibility: hidden;
   opacity: 0;
 
@@ -190,6 +191,11 @@
   gap: 4.8rem;
 }
 
+.navigation__menu-phone__close__link {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .navigation__menu-phone__close {
   cursor: pointer;
   position: absolute;
@@ -197,6 +203,11 @@
   right: 2.2rem;
   width: 1.9rem;
   height: 1.9rem;
+}
+
+.navigation__menu-phone__logo__link {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .navigation__menu-phone__logo {
@@ -207,6 +218,8 @@
 .navigation__menu-phone__list {
   @extend %center;
 
+  visibility: hidden;
+  opacity: 0;
   flex-direction: column;
   gap: 3.2rem;
 }
@@ -221,5 +234,8 @@
 
 .navigation__menu-phone__cta {
   @extend %button-secondary-l;
+
+  visibility: hidden;
+  opacity: 0;
 }
 
