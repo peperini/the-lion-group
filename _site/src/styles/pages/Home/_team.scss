@@ -98,3 +98,16 @@
   width: 100%;
   height: 100%;
 }
+
+.team__bg-logo {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-width: 64.7553rem;
+
+  @include media('<phone') {
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+  }
+}
