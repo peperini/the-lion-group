@@ -26,7 +26,8 @@ const links = document.querySelectorAll('a')
 const navMenu = document.querySelector('.navigation__menu-phone')
 const navigationHam = document.querySelector('.navigation__menu__icon')
 const navigationHamClose = document.querySelector('.navigation__menu-phone__close')
-const dropdowns = document.querySelectorAll('.highlight-brand__left__content__lower__dropdown');
+const dropdowns = document.querySelectorAll('.highlight-brand__left__content__lower__dropdown')
+const bullets = document.querySelectorAll('.carousel__image-container__swiper__pagination__bullet')
 
 
 function linkMouseIn() {
@@ -79,8 +80,10 @@ dropdowns.forEach(dropdown => {
 Scrolling Carousel Implementation
 */
 // Loop over each content element
+bullets[0].classList.add('pagination__bullet-active')
 carouselContents.forEach((content, index) => {
   const image = carouselImages[index] // Get the corresponding image
+  const bullet = bullets[index]; // Get the corresponding bullet
 
   const timeline = gsap.timeline({
     scrollTrigger: {
@@ -89,7 +92,24 @@ carouselContents.forEach((content, index) => {
       end: 'bottom 10%',
       scrub: 2, // Make the animation tied to scroll position for smoother experience
       markers: true, // Optional: for debugging
-      toggleActions: 'play reverse play reverse', // Control animation direction
+      onEnter: () => {
+        // Active the current bullet
+        bullets.forEach(b => b.classList.remove('pagination__bullet-active'))
+        bullet.classList.add('pagination__bullet-active')
+      },
+      onLeave: () => {
+        // Deactivates the bullet when content leaves the viewport
+        bullet.classList.remove('pagination__bullet-active')
+      },
+      onEnterBack: () => {
+        // Bullet activated when scrolling back up
+        bullets.forEach(b => b.classList.remove('pagination__bullet-active'))
+        bullet.classList.add('pagination__bullet-active')
+      },
+      onLeaveBack: () => {
+        // Deactivate when leaving back
+        bullet.classList.remove('pagination__bullet-active')
+      }
     }
   })
 
@@ -117,6 +137,10 @@ carouselContents.forEach((content, index) => {
       ease: 'power3.inOut'
     }, "+=0") // Run in parallel with content fade-out
 })
+
+/*
+Show and Hide dropdown fucntions
+ */
 
 function showDropdown() {
   if (isAnimating) return
