@@ -38,6 +38,10 @@ function linkMouseLeave() {
   this.classList.remove('navigation--active')
 }
 
+/*
+Acordeon / Dropdown Implementation
+*/
+
 dropdowns.forEach(dropdown => {
   const head = dropdown.querySelector('.highlight-brand__left__content__lower__dropdown__head');
   const content = dropdown.querySelector('.highlight-brand__left__content__lower__dropdown__content');
@@ -45,7 +49,7 @@ dropdowns.forEach(dropdown => {
 
   // Close all dropdowns except the first one by default
   if(dropdown !== dropdowns[0]) {
-    content.style.display = 'none'
+    gsap.set(content, { height: 0, autoAlpha: 0 })
   } else {
     activeDropdown = dropdown
     activeIcon = dropdownIcon
@@ -56,19 +60,34 @@ dropdowns.forEach(dropdown => {
     if(activeDropdown && activeDropdown !== dropdown) {
       // Close previously active dropdown and reset the icon
       const activeContent = activeDropdown.querySelector('.highlight-brand__left__content__lower__dropdown__content')
-      activeContent.style.display = 'none'
+      gsap.to(activeContent, {
+        height: 0,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: 'power3.inOut'
+      });
       activeIcon.style.transform = 'rotate(0deg)'
     }
 
     if(dropdown === activeDropdown) {
       // If clicking the currently active dropdown, toggle it closed
-      content.style.display = 'none'
+      gsap.to(content, {
+        height: 0,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: 'power3.inOut'
+      });
       dropdownIcon.style.transform = 'rotate(0deg)';
       activeDropdown = null;
       activeIcon = null;
     } else {
       // Otherwise, open the clicked dropdown
-      content.style.display = 'block'
+      gsap.to(content, {
+        height: 'auto',
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: 'power3.inOut'
+      });
       dropdownIcon.style.transform = 'rotate(180deg)';
       activeDropdown = dropdown;
       activeIcon = dropdownIcon;
@@ -79,8 +98,8 @@ dropdowns.forEach(dropdown => {
 /*
 Scrolling Carousel Implementation
 */
-// Loop over each content element
 bullets[0].classList.add('pagination__bullet-active')
+
 carouselContents.forEach((content, index) => {
   const image = carouselImages[index] // Get the corresponding image
   const bullet = bullets[index]; // Get the corresponding bullet
@@ -91,7 +110,7 @@ carouselContents.forEach((content, index) => {
       start: 'top 80%',
       end: 'bottom 10%',
       scrub: 2, // Make the animation tied to scroll position for smoother experience
-      markers: true, // Optional: for debugging
+      /* markers: true, // Optional: for debugging */
       onEnter: () => {
         // Active the current bullet
         bullets.forEach(b => b.classList.remove('pagination__bullet-active'))
