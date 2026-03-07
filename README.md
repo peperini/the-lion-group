@@ -1,6 +1,8 @@
 # The Lion Group
 
-[See Demo](https://the-lion-group-rust.vercel.app/)
+The Lion Group is a marketing and communications agency. This is the source code for their website, built as a static site with modern tooling.
+
+[See Live](https://the-lion-group-rust.vercel.app/)
 
 ## Main tools
 
